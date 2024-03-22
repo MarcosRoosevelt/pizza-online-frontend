@@ -1,0 +1,78 @@
+@import url(global.css);
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-background-section);
+    height: 41.87rem;
+    width: 63.25rem;
+    border-radius: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.container__logo {
+    width: 30%;
+    text-align: center;
+    margin-right: 9.37rem;
+    
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.titulo {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.link__cadastro{
+    color: #444444;
+    margin-top: 10px;
+    display: block;
+}
+
+
+.form-group input {
+    border: none;
+    border-bottom: 1px solid var(--cor-texto-preto);
+    border-radius: 0;
+}
+
+  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+  
+button:hover {
+background-color: #0056b3;
+}
