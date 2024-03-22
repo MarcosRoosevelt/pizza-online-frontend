@@ -1,6 +1,5 @@
 @import url(reset.css);
 
-
 :root{
     --cor-background: #FFEDD0;
     --cor-sidebar: #22333B;
@@ -11,7 +10,5 @@
 
 body {
     background-color: var(--cor-background);
-    width: 100vw;
-    height: 100vh;
 }
 
