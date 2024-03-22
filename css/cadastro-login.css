@@ -43,8 +43,8 @@
 
 .login100-form-title {
     font-size: 24px;
-    font-weight: 700;
-    color: #333333;
+    font-weight: 400;
+    color: var(--cor-cardapio-2);
     line-height: 1.2;
     text-align: center;
     width: 100%;
@@ -103,12 +103,12 @@
 .login100-form-btn {
     font-size: 15px;
     line-height: 1.5;
-    color: #fff;
+    color: var(--cor-cardapio-2);
     text-transform: uppercase;
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #57b846;
+    background: var(--cor-cardapio-1);
     display: flex;
     justify-content: center;
     align-items: center;
