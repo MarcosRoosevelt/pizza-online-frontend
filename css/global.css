@@ -1,0 +1,17 @@
+@import url(reset.css);
+
+
+:root{
+    --cor-background: #FFEDD0;
+    --cor-sidebar: #22333B;
+    --cor-texto-preto: #000000;
+    --cor-background-section: #ffffff;
+    --cor-link-cadastro: #444444;
+}
+
+body {
+    background-color: var(--cor-background);
+    width: 100vw;
+    height: 100vh;
+}
+
