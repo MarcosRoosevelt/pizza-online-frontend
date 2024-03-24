@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/cadastro-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login | Pizza Online</title>
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/cadastro-login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Login | Pizza Online</title>
 </head>
+
 <body>
-  <div class="limiter">
+	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-                <form class="login100-form">
+				<form class="login100-form" id="form-login">
 					<span class="login100-form-title">Login</span>
 
 					<div class="wrap-input100">
-						<input class="input100" type="email" name="email" placeholder="Email" required>
+						<input class="input100" id="email" type="email" placeholder="Email" required>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
 					<div class="wrap-input100">
-						<input class="input100" type="password" name="pass" placeholder="Password" required>
+						<input class="input100" id="password" type="password" placeholder="Password" required>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					
+
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">Login</button>
+						<button type="submit" class="login100-form-btn">Login</button>
 					</div>
 					<div class="text-center p-t-136">
 						<a class="txt2" href="cadastro.html">Cadastre-se
@@ -46,5 +48,8 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="module" src="../js/api/login.js"></script>
 </body>
+
 </html>

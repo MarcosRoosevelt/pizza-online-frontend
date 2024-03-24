@@ -1,63 +1,66 @@
-'<!DOCTYPE html>
+'
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/cadastro-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Cadastro | Pizza Online</title>
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/cadastro-login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Cadastro | Pizza Online</title>
 </head>
+
 <body>
-  <div class="limiter">
+	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="../img/logo.png" alt="IMG">
 				</div>
 
-				<form class="login100-form">
+				<form class="login100-form" id="form-cadastro">
 					<span class="login100-form-title">Cadastro</span>
 
-          <div class="wrap-input100">
-						<input class="input100" type="text" name="nome" placeholder="Nome" required>
+					<div class="wrap-input100">
+						<input class="input100" type="text" id="name" placeholder="Nome" required>
 						<span class="symbol-input100">
 							<i class="fa fa-user" aria-hidden="true"></i>
 						</span>
 					</div>
 
-          <div class="wrap-input100">
-						<input class="input100" id="phone_number" type="text" name="telefone" placeholder="Telefone" required>
+					<div class="wrap-input100">
+						<input class="input100" id="phone_number" type="text" placeholder="Telefone" required>
 						<span class="symbol-input100">
 							<i class="fa fa-phone" aria-hidden="true"></i>
 						</span>
 					</div>
 
-          <div class="wrap-input100">
-						<input class="input100" id="cep" type="text" name="cep" placeholder="CEP" required>
+					<div class="wrap-input100">
+						<input class="input100" id="cep" type="text" placeholder="CEP" maxlength="9" minlength="9" required>
 						<span class="symbol-input100">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
 						</span>
 					</div>
 
 					<div class="wrap-input100">
-						<input class="input100" type="email" name="email" placeholder="Email" required>
+						<input class="input100" type="email" id="email" placeholder="Email" required>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
 					<div class="wrap-input100">
-						<input class="input100" type="password" name="pass" placeholder="Password" required>
+						<input class="input100" type="password" id="password" placeholder="Password" required>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					
+
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">Login</button>
+						<button type="submit" class="login100-form-btn">Cadastrar</button>
 					</div>
 					<div class="text-center p-t-136">
 						<a class="txt2" href="login.html">Já possui cadastro?
@@ -69,6 +72,8 @@
 		</div>
 	</div>
 
-  <script src="../utils/masks.js"></script>
+	<script type="module" src="../js/api/register.js"></script>
+	<script type="module" src="../js/api/address.js"></script>
+	<script src="../utils/masks.js"></script>
 </body>
 </html>
