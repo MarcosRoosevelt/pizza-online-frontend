@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+
+}
+
+.apresentacao__titulos__conteudo {
+    padding: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo__1,
+.grupo__2 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.apresentacao__conteudo__logo {
+    display: flex;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 20rem;
+    height: 12.75rem;
+}
+
+.apresentacao__titulos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.quadrado__1,
+.quadrado__4 {
+    display: flex;
+    padding: 10px;
+    background-color: #ffac44;
+    width: 556px;
+    height: 350px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: 400;
+    color: #22333b;
+}
+
+.quadrado__2,
+.quadrado__3 {
+    display: flex;
+    padding: 10px;
+    background-color: #22333b;
+    width: 556px;
+    height: 350px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: 400;
+    color: #ffac44;
+}
+
+.quadrado__1,
+.quadrado__2,
+.quadrado__3,
+.quadrado__4 {
+    width: 556px;
+    height: auto;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.336);
+}
+
+.quadrado__1 img,
+.quadrado__2 img,
+.quadrado__3 img,
+.quadrado__4 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.informacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin: auto;
+    width: 231px;
+    font-size: 1.25rem;
+}
+
+.informacao p {
+    margin: 10px 0;
+}
+
+.botao {
+    width: 150px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+
+.quadrado__1 .botao,
+.quadrado__4 .botao{
+    background-color: #22333b;
+    color: #ffac44;
+    font-size: 1.25rem;
+}
+
+.quadrado__1 .botao:hover,
+.quadrado__4 .botao:hover{
+    background-color: #131d22;
+}
+
+.quadrado__2 .botao,
+.quadrado__3 .botao{
+    background-color: #ffac44;
+    color: #22333b;
+    font-size: 1.25rem;
+}
+
+.quadrado__2 .botao:hover,
+.quadrado__3 .botao:hover{
+    background-color: #e08516;
+}
