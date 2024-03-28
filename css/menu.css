@@ -1,51 +1,81 @@
-.cabecalho {
-    width: 250px;
-    background-color: #22333b;
-    height: 100vh;
-    position:fixed ; 
-    padding-top: 20px;
-  }
-  
-  .cabecalho__menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    padding-top: 20px;
-    color: #ffac44;
-    font-size: 1.5rem;
-  }
-  
-  .cabecalho__menu__links {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    padding-top: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.125rem;
-  }
-  .cabecalho__menu__links__tag {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    text-align: center;
-    font-size: 16px;
-    gap: 16px;
-  }
-  
-  .Logout{
-    display: flex;
-    position: absolute;
-    bottom: 5%;
-    gap: 16px;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .cabecalho__menu__links__tag:hover{
-    color: rgba(255, 255, 255, 0.555);
-  }
-  .Logout:hover{
-    color: rgba(255, 255, 255, 0.555);
-  }
+@import url(./reset.css);
+@import url(./global.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+.sidebar {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: var(--cor-sidebar);
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: var(--cor-cardapio-1);
+  line-height: 70px;
+  text-align: center;
+  background: var(--cor-sidebar);
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 16px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+
+.sidebar ul li:last-child {
+  width: 250px;
+  position: fixed;
+  bottom: 0;
+}
+
+.ativo{
+  background-color: #3a5c6b;
+}
+
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+section{
+  height: 100vh;
+  transition: all .5s;
+}

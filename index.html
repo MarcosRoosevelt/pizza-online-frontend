@@ -1,105 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Cardapio Online</title>
+    <title>Pizzas | Pizza Online</title>
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <p>Usuário</p>
-            <div class="cabecalho__menu__links">
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/logar.png" alt="Logar imagem">Logar</a>
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/pizzas.png"
-                        alt="Pizza imagem">Pizzas</a>
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/visualizar_pedido.png"
-                        alt="Visualizar pedido imagem">Visualizar Pedido</a>
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/mais_pedidos.png" alt="">Mais
-                    Pedidas</a>
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/pedidos_anteriores.png" alt="">Pedidos
-                    Anteriores</a>
-                <a class="cabecalho__menu__links__tag" href="#"><img src="./img/concluir_pedido.png" alt="">Concluir
-                    Pedido</a>
-                <a class="Logout" href="#"><img src="./img/sair.png" alt="">Sair</a>
-            </div>
-        </nav>
-    </header>
-    <main class="container">
-        <section class="apresentacao">
-            <div class="apresentacao__conteudo__logo">
-                <img class="apresentacao__logo" src="./img/pizzaOnline 1.png" alt="Logo pizzaOnline">
-            </div>
-            <div class="apresentacao__titulos__conteudo">
-                <div class="grupo__1">
-                    <div class="quadrado__1">
-                        <img src="./img/pizzapequena.png" alt="pizza pequena">
-                        <div class="informacao">
-                            <p>Pizza Pequena</p>
-                            <p>R$ 34,90</p>
-                            <p>4 fatias</p>
-                            <button class="botao">Comprar</button>
-                        </div>
-                        <!-- <div class="button__">
-            <button class="botao">Comprar</button>
-          </div> -->
-
-                    </div>
-                    <div class="quadrado__2">
-                        <img src="./img/pizzaMedia.png" alt="pizza pequena">
-
-                        <div class="informacao">
-                            <p>Pizza Média</p>
-                            <p>R$ 42,90</p>
-                            <p>6 fatias</p>
-                            <button class="botao">Comprar</button>
-                        </div>
-                        <!-- <div class="button__">
-              <button class="botao">Comprar</button>
-            </div> -->
-
-                    </div>
+    <nav class="sidebar">
+        <header class="user">Usuário</header>
+        <ul>
+            <li><a href="./pages/login.html"><i class="fas fa-sign-in-alt"></i>Logar</a></li>
+            <li><a href="#" class="ativo"><i class="fas fa-book-open"></i>Pizzas</a></li>
+            <li><a href="./pages/visualizarPedidos.html"><i class="fas fa-clipboard-list"></i>Visualizar Pedidos</a></li>
+            <li><a href="./pages/maisPedidas.html"><i class="fas fa-sort-amount-up-alt"></i>Mais Pedidas</a></li>
+            <li><a href="./pages/pedidosAnteriores.html"><i class="fas fa-layer-group"></i>Pedidos Anteriores</a></li>
+            <li><a href="./pages/concluirPedido.html"><i class="fas fa-money-check"></i>Concluir Pedido</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+        </ul>
+    </nav>
+    <main class="principal">
+        <div class="img-logo">
+            <img src="./img/logo.png" alt="Logo Pizza Online">
+        </div>
+        <div class="container-itens">
+            <div class="item tipo-1">
+                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+                <div class="info">
+                    <p>Pizza Pequena</p>
+                    <p>4 Fatias</p>
+                    <p>R$ 40,90</p>
+                    <button class="botao btn-1">Comprar</button>
                 </div>
-
-                <div class="grupo__2">
-                    <div class="quadrado__3">
-                        <img src="./img/pizzaGrande.png" alt="pizza pequena">
-
-                        <div class="informacao">
-                            <p>Pizza Grande</p>
-                            <p>R$ 49,90</p>
-                            <p>8 fatias</p>
-                            <button class="botao">Comprar</button>
-                        </div>
-                        <!-- <div class="button__">
-            <button class="botao">Comprar</button>
-          </div> -->
-
-                    </div>
-
-                    <div class="quadrado__4">
-                        <img src="./img/pizzaFamilia.png" alt="pizza pequena">
-
-                        <div class="informacao">
-                            <p>Pizza Família</p>
-                            <p>R$ 59,90</p>
-                            <p>10 fatias</p>
-                            <button class="botao">Comprar</button>
-                        </div>
-                        <!-- <div class="button__">
-              <button class="botao">Comprar</button>
-            </div> -->
-
-                    </div>
-                </div>
-
             </div>
-        </section>
+            <div class="item tipo-2">
+                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+                <div class="info">
+                    <p>Pizza Média</p>
+                    <p>6 Fatias</p>
+                    <p>R$ 45,90</p>
+                    <button class="botao btn-2">Comprar</button>
+                </div>
+            </div>
+            <div class="item tipo-2">
+                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+                <div class="info">
+                    <p>Pizza Grande</p>
+                    <p>8 Fatias</p>
+                    <p>R$ 49,90</p>
+                    <button class="botao btn-2">Comprar</button>
+                </div>
+            </div>
+            <div class="item tipo-1">
+                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+                <div class="info">
+                    <p>Pizza Família</p>
+                    <p>10 Fatias</p>
+                    <p>R$ 55,90</p>
+                    <button class="botao btn-1">Comprar</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
