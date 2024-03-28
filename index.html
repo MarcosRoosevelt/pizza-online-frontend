@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Pizzas | Pizza Online</title>
 </head>
@@ -17,7 +17,7 @@
         <ul>
             <li><a href="./pages/login.html"><i class="fas fa-sign-in-alt"></i>Logar</a></li>
             <li><a href="#" class="ativo"><i class="fas fa-book-open"></i>Pizzas</a></li>
-            <li><a href="./pages/visualizarPedidos.html"><i class="fas fa-clipboard-list"></i>Visualizar Pedidos</a></li>
+            <li><a href="./pages/visualizarPedidos.html"><i class="fas fa-clipboard-list"></i>Visualizar Pedido</a></li>
             <li><a href="./pages/maisPedidas.html"><i class="fas fa-sort-amount-up-alt"></i>Mais Pedidas</a></li>
             <li><a href="./pages/pedidosAnteriores.html"><i class="fas fa-layer-group"></i>Pedidos Anteriores</a></li>
             <li><a href="./pages/concluirPedido.html"><i class="fas fa-money-check"></i>Concluir Pedido</a></li>
@@ -29,8 +29,8 @@
             <img src="./img/logo.png" alt="Logo Pizza Online">
         </div>
         <div class="container-itens">
-            <div class="item tipo-1">
-                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+            <div class="item tipo-1" data-tipo="Pizza Pequena" data-valor="40.90">
+                <div><img src="./img/pizzapequena.png" alt="Foto pizza" srcset=""></div>
                 <div class="info">
                     <p>Pizza Pequena</p>
                     <p>4 Fatias</p>
@@ -38,8 +38,8 @@
                     <button class="botao btn-1">Comprar</button>
                 </div>
             </div>
-            <div class="item tipo-2">
-                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+            <div class="item tipo-2" data-tipo="Pizza Média" data-valor="45.90">
+                <div><img src="./img/pizzapequena.png" alt="Foto pizza" srcset=""></div>
                 <div class="info">
                     <p>Pizza Média</p>
                     <p>6 Fatias</p>
@@ -47,8 +47,8 @@
                     <button class="botao btn-2">Comprar</button>
                 </div>
             </div>
-            <div class="item tipo-2">
-                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+            <div class="item tipo-2" data-tipo="Pizza Grande" data-valor="49.90">
+                <div><img src="./img/pizzapequena.png" alt="Foto pizza" srcset=""></div>
                 <div class="info">
                     <p>Pizza Grande</p>
                     <p>8 Fatias</p>
@@ -56,8 +56,8 @@
                     <button class="botao btn-2">Comprar</button>
                 </div>
             </div>
-            <div class="item tipo-1">
-                <div><img src="./img/pizzapequena.png" alt="" srcset=""></div>
+            <div class="item tipo-1" data-tipo="Pizza Família" data-valor="55.90">
+                <div><img src="./img/pizzapequena.png" alt="Foto pizza" srcset=""></div>
                 <div class="info">
                     <p>Pizza Família</p>
                     <p>10 Fatias</p>
@@ -66,7 +66,18 @@
                 </div>
             </div>
         </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+            </div>
+        </div>
     </main>
+    <script>
+        
+    </script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>

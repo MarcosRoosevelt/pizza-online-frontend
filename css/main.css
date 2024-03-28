@@ -1,22 +1,5 @@
 @import url(./global.css);
 
-.principal {
-    height: 100vh;
-    margin-left: 250px;
-    padding: 20px;
-}
-
-.img-logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.img-logo img {
-    width: 320px;
-    height: 200px;
-}
-
 .container-itens {
     display: grid;
     height: 80%;
@@ -88,6 +71,84 @@
 
 .btn-2:hover{
     background: #f88d0a;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .flavor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.add,
+.remove {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity {
+    margin: 0 10px;
+}
+
+.finalize {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    font-size: 16px;
+    background: var(--cor-cardapio-1);
+    color: var(--cor-cardapio-2);
+    border-radius: 10px;
+}
+
+.finalize:hover{
+    background: #e98e1f;
 }
 
 @media (max-width: 1280px) {
