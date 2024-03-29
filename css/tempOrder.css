@@ -1,0 +1,32 @@
+@import url(global.css);
+
+.title{
+    font-size: 24px;
+    color: var(--cor-cardapio-2);
+    margin-top: 50px;
+}
+
+#pizza-details{
+    border: 1px solid #00000079;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.pizza-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--cor-cardapio-2);
+}
+
+.pizza-info p {
+    margin: 0;
+    color: var(--cor-cardapio-2);
+}
+
+.total{
+    font-size: 24px;
+    text-align: right;
+    color: var(--cor-cardapio-2);
+}
+

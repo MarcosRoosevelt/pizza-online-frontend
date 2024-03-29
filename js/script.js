@@ -1,5 +1,7 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { verificarAutenticacao } from './auth.js'; 
+import { verificarAutenticacao } from './auth.js';
+import { createPizza } from './api/pizza.js';
+
 
 var modal = document.getElementById("myModal");
 var buttons = document.querySelectorAll(".botao");
@@ -35,7 +37,7 @@ document.querySelectorAll(".botao").forEach(async function (button) {
         let item = this.closest('.item');
         let name = item.dataset.tipo;
         let price = parseFloat(item.dataset.valor);
-        
+
         try {
             const response = await axios.get("http://localhost:8082/flavors");
             const flavors = response.data;
@@ -84,66 +86,34 @@ document.querySelectorAll(".botao").forEach(async function (button) {
                 });
             });
 
-            document.querySelector(".finalize").addEventListener("click", function () {
+
+
+            document.querySelector(".finalize").addEventListener("click", async function () {
                 const usuarioAutenticado = verificarAutenticacao();
-                
+
                 if (!usuarioAutenticado) {
                     alert("Você precisa estar logado para finalizar o pedido. Por favor, faça o login.");
                     return;
                 }
-                
-                const selectedFlavors = []; 
-            
-                
-                document.querySelectorAll(".flavor").forEach(flavor => {
-                    const quantity = parseInt(flavor.querySelector(".quantity").textContent);
-                    if (quantity > 0) { 
-                        const flavorName = flavor.querySelector("span").textContent; 
-                        const flavorId = flavor.dataset.saborId;
-                        selectedFlavors.push({ id: flavorId }); 
-                    }
-                });
-            
-                console.log("Sabores selecionados:", selectedFlavors);
-            });
-            
-            document.querySelector(".finalize").addEventListener("click", function () {
-                const usuarioAutenticado = verificarAutenticacao();
-                
-                if (!usuarioAutenticado) {
-                    alert("Você precisa estar logado para finalizar o pedido. Por favor, faça o login.");
-                    return;
-                }
-                
+
                 const flavorIds = [];
-        
+
                 document.querySelectorAll(".flavor").forEach(flavor => {
                     const quantity = parseInt(flavor.querySelector(".quantity").textContent);
-                    if (quantity > 0) { 
-                        const flavorId = flavor.dataset.saborId; 
-                        flavorIds.push({ id: flavorId }); 
+                    if (quantity > 0) {
+                        const flavorId = flavor.dataset.saborId;
+                        flavorIds.push(flavorId);
                     }
                 });
 
-                const pizzaTypeMap = {
-                    "Pizza Pequena": "PEQUENA",
-                    "Pizza Média": "MEDIA",
-                    "Pizza Grande": "GRANDE",
-                    "Pizza Família": "FAMILIA"
-                };
-                
-                const pizzaType = pizzaTypeMap[name];
 
-                const pizza = {
-                    name,
-                    price,
-                    pizzaType,
-                    flavorIds
-                }
-            
+                const pizza = createPizza(name, price, flavorIds);
+                let pizzasSelecionadas = JSON.parse(localStorage.getItem('pizzas')) || [];
+                pizzasSelecionadas.push(pizza);
+                localStorage.setItem('pizzas', JSON.stringify(pizzasSelecionadas));
+                location.href = "../pages/visualizarPedidos.html";
                 console.log("Pizza:", pizza);
             });
-            
 
         } catch (e) {
             console.error("Erro ao obter sabores. ", e);
@@ -158,5 +128,3 @@ function getTotalQuantity() {
     });
     return total;
 }
-
-export default pizza;
