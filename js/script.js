@@ -90,14 +90,14 @@ document.querySelectorAll(".botao").forEach(async function (button) {
 
             document.querySelector(".finalize").addEventListener("click", async function () {
                 const usuarioAutenticado = verificarAutenticacao();
-
+            
                 if (!usuarioAutenticado) {
                     alert("Você precisa estar logado para finalizar o pedido. Por favor, faça o login.");
                     return;
                 }
-
+            
                 const flavorIds = [];
-
+            
                 document.querySelectorAll(".flavor").forEach(flavor => {
                     const quantity = parseInt(flavor.querySelector(".quantity").textContent);
                     if (quantity > 0) {
@@ -105,15 +105,24 @@ document.querySelectorAll(".botao").forEach(async function (button) {
                         flavorIds.push(flavorId);
                     }
                 });
-
-
+        
                 const pizza = createPizza(name, price, flavorIds);
+
                 let pizzasSelecionadas = JSON.parse(localStorage.getItem('pizzas')) || [];
-                pizzasSelecionadas.push(pizza);
+                
+                if (!Array.isArray(pizzasSelecionadas)) {
+                    pizzasSelecionadas = [];
+                }
+                
+                pizzasSelecionadas.push({ pizza: pizza });
+
                 localStorage.setItem('pizzas', JSON.stringify(pizzasSelecionadas));
+            
                 location.href = "../pages/visualizarPedidos.html";
                 console.log("Pizza:", pizza);
             });
+            
+            
 
         } catch (e) {
             console.error("Erro ao obter sabores. ", e);
