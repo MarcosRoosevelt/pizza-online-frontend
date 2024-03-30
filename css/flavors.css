@@ -1,0 +1,12 @@
+@import url(global.css);
+
+.title{
+    color: #22333B;
+    margin: 20px 0;
+}
+
+.flavor{
+    color: #22333B;
+    padding: 20px 0;
+    font-size: 20px;
+}

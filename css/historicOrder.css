@@ -1,0 +1,36 @@
+@import url(global.css);
+
+.title{
+    color: #22333B;
+    margin: 20px 0;
+}
+
+#order-details{
+    margin-bottom: 20px;
+}
+
+.order-container {
+    border: 1px solid #0000008c; 
+    margin: 20px 0; 
+    padding: 10px; 
+    color: #22333B;
+}
+
+.pizza-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    margin-right: auto; /* Alinha à esquerda */
+}
+
+.right {
+    margin-left: auto; /* Alinha à direita */
+}
+
+.total {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 20px;
+}

@@ -3,7 +3,6 @@ import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 document.addEventListener('DOMContentLoaded', async function () {
     const token = localStorage.getItem('token');
     const pizzasSelecionadas = JSON.parse(localStorage.getItem('pizzas')) || [];
-    console.log(token);
 
     let totalPedido = 0;
 
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             nameAndFlavors.textContent = `${pizza.name || 'Pizza'} - `;
 
             const flavorIds = pizza.flavorIds || [];
-            const flavorDetails = [];
+            const flavors = [];
             for (const flavorId of flavorIds) {
                 try {
                     const res = await axios.get(`http://localhost:8082/flavors/${flavorId}`, {
@@ -31,14 +30,14 @@ document.addEventListener('DOMContentLoaded', async function () {
                             'Authorization': `Bearer ${token}`
                         }
                     });
-                    flavorDetails.push(res.data.name);
+                    flavors.push(res.data);
                 } catch (error) {
                     console.error(`Erro ao obter detalhes do sabor com ID ${flavorId}:`, error);
                 }
             }
 
             const flavorInfo = document.createElement('span');
-            flavorInfo.textContent = flavorDetails.join(' / ');
+            flavorInfo.textContent = flavors.map(flavor => flavor.name).join(' / ');
 
             nameAndFlavors.appendChild(flavorInfo);
 
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const user = await getUser(token);
+        console.log(user);
         if (user && user.address) {
             const enderecoElement = document.createElement('p');
             enderecoElement.textContent = `Endereço de entrega: ${user.address.street}, ${user.address.neighborhood}`;
@@ -74,14 +74,30 @@ document.addEventListener('DOMContentLoaded', async function () {
         const btnContainer = document.getElementById('btn-div');
         btnContainer.appendChild(concluirPedidoBtn);
 
-        const pizzasJSON = pizzasSelecionadas.map(pizzaData => {
+        const pizzasJSON = await Promise.all(pizzasSelecionadas.map(async pizzaData => {
             const pizza = pizzaData.pizza;
+            const flavorIds = pizza.flavorIds || [];
+            const flavors = [];
+            for (const flavorId of flavorIds) {
+                try {
+                    const res = await axios.get(`http://localhost:8082/flavors/${flavorId}`, {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    console.log(res.data)
+                    flavors.push(res.data);
+                } catch (error) {
+                    console.error(`Erro ao obter detalhes do sabor com ID ${flavorId}:`, error);
+                }
+            }
             return {
                 name: pizza.name,
                 price: pizza.price,
-                flavorIds: pizza.flavorIds
+                pizzaType: pizza.pizzaType,
+                flavors
             };
-        });
+        }));
 
         concluirPedidoBtn.addEventListener('click', async function () {
             try {

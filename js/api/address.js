@@ -20,6 +20,7 @@ const getAddressByCEP = async (cepInput) => {
         };
         return address;
     } catch (error) {
+        alert("CEP inválido!")
         throw error;
     }
 };
