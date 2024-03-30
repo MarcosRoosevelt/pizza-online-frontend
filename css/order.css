@@ -30,20 +30,13 @@
     color: var(--cor-cardapio-2);
 }
 
-#btns {
+#btn-div{
     display: flex;
-    justify-content: space-between; 
+    justify-content: center;
+    margin: 20px 0;
 }
 
-#add-more {
-    margin-right: auto;
-}
-
-#concluir-pedido {
-    margin-left: auto; 
-}
-
-.btn {
+.btn{
     padding: 10px 20px;
     background-color: var(--cor-cardapio-2);
     color: var(--cor-cardapio-1);
