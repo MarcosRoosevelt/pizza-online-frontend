@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         try {
             const response = await axios.post(
-                "http://localhost:8082/auth/login",
+                "18.228.238.255:8082/auth/login",
                 JSON.stringify(credentials),
                 {
                     headers: { "Content-Type": "application/json" },

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const token = localStorage.getItem('token');
 
     try {
-        const res = await axios.get('http://localhost:8082/orders/cliente', {
+        const res = await axios.get('18.228.238.255:8082/orders/cliente', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

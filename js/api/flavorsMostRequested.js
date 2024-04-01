@@ -2,7 +2,7 @@ import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 
 document.addEventListener('DOMContentLoaded', async function () {
     try {
-        const res = await axios.get("http://localhost:8082/flavors/ranking");
+        const res = await axios.get("18.228.238.255:8082/flavors/ranking");
         const flavors = res.data;
 
         const flavorsDiv = document.querySelector('.flavors');

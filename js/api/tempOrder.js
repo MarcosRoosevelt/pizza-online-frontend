@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const flavorDetails = [];
                 for (const flavorId of flavorIds) {
                     try {
-                        const res = await axios.get(`http://localhost:8082/flavors/${flavorId}`, {
+                        const res = await axios.get(`18.228.238.255:8082/flavors/${flavorId}`, {
                             headers: {
                                 'Authorization': `Bearer ${token}`
                             }

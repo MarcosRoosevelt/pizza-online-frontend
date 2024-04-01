@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         try {
           const response = await axios.post(
-            "http://localhost:8082/auth/register",
+            "18.228.238.255:8082/auth/register",
             JSON.stringify(userData),
             {
               headers: { "Content-Type": "application/json" },

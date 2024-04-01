@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const flavors = [];
             for (const flavorId of flavorIds) {
                 try {
-                    const res = await axios.get(`http://localhost:8082/flavors/${flavorId}`, {
+                    const res = await axios.get(`18.228.238.255:8082/flavors/${flavorId}`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const flavors = [];
             for (const flavorId of flavorIds) {
                 try {
-                    const res = await axios.get(`http://localhost:8082/flavors/${flavorId}`, {
+                    const res = await axios.get(`18.228.238.255:8082/flavors/${flavorId}`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         concluirPedidoBtn.addEventListener('click', async function () {
             try {
-                const res = await axios.post('http://localhost:8082/orders', {
+                const res = await axios.post('18.228.238.255:8082/orders', {
                     pizzas: pizzasJSON
                 }, {
                     headers: {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function getUser(token) {
     try {
-        const res = await axios.get('http://localhost:8082/clientes', {
+        const res = await axios.get('18.228.238.255:8082/clientes', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
