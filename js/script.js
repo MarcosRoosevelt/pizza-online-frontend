@@ -39,7 +39,7 @@ document.querySelectorAll(".botao").forEach(async function (button) {
         let price = parseFloat(item.dataset.valor);
 
         try {
-            const response = await axios.get("18.228.238.255:8082/flavors");
+            const response = await axios.get("http://localhost:8082/flavors");
             const flavors = response.data;
 
             const flavorButtons = flavors.map(flavor => `
