@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const token = localStorage.getItem('token');
 
     try {
-        const res = await axios.get('http://pizzaonline-api.azurewebsites.net/orders/cliente', {
+        const res = await axios.get('https://pizzaonline-api.azurewebsites.net/orders/cliente', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

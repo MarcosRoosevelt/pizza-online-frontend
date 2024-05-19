@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const flavors = [];
             for (const flavorId of flavorIds) {
                 try {
-                    const res = await axios.get(`http://pizzaonline-api.azurewebsites.net/flavors/${flavorId}`, {
+                    const res = await axios.get(`https://pizzaonline-api.azurewebsites.net/flavors/${flavorId}`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const flavors = [];
             for (const flavorId of flavorIds) {
                 try {
-                    const res = await axios.get(`http://pizzaonline-api.azurewebsites.net/flavors/${flavorId}`, {
+                    const res = await axios.get(`https://pizzaonline-api.azurewebsites.net/flavors/${flavorId}`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         concluirPedidoBtn.addEventListener('click', async function () {
             try {
-                const res = await axios.post('http://pizzaonline-api.azurewebsites.net/orders', {
+                const res = await axios.post('https://pizzaonline-api.azurewebsites.net/orders', {
                     pizzas: pizzasJSON
                 }, {
                     headers: {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function getUser(token) {
     try {
-        const res = await axios.get('http://pizzaonline-api.azurewebsites.net/clientes', {
+        const res = await axios.get('https://pizzaonline-api.azurewebsites.net/clientes', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

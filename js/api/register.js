@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         try {
           const response = await axios.post(
-            "http://pizzaonline-api.azurewebsites.net/auth/register",
+            "https://pizzaonline-api.azurewebsites.net/auth/register",
             JSON.stringify(userData),
             {
               headers: { "Content-Type": "application/json" },
