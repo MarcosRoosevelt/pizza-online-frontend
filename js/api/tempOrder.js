@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const flavorDetails = [];
                 for (const flavorId of flavorIds) {
                     try {
-                        const res = await axios.get(`https://pizzaonline-api.azurewebsites.net/flavors/${flavorId}`, {
+                        const res = await axios.get(`http://localhost:8080/flavors/${flavorId}`, {
                             headers: {
                                 'Authorization': `Bearer ${token}`
                             }

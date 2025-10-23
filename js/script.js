@@ -39,7 +39,7 @@ document.querySelectorAll(".botao").forEach(async function (button) {
         let price = parseFloat(item.dataset.valor);
 
         try {
-            const response = await axios.get("https://pizzaonline-api.azurewebsites.net/flavors");
+            const response = await axios.get("http://localhost:8080/flavors");
             const flavors = response.data;
 
             const flavorButtons = flavors.map(flavor => `
